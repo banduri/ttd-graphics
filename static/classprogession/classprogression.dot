@@ -1,0 +1,51 @@
+digraph {
+        layout=circo;
+        ranksep=10;
+
+
+        subgraph archer {
+                label="Archer";
+                Archer[image="archer.png",label="",fixedsize=false];
+                Archer -> Sniper[label="10 Ranks\n27625 Essence",color=brown,penwidth=3.0];
+                Archer -> Falconeer[label="20 Ranks\n157750 Essence",color=brown,penwidth=3.0];
+        }
+        subgraph rogue {
+                label="Rogue";
+                Rogue[image="rogue.png",label="",fixedsize=false];
+                Rogue  -> Assasin[label="10 Ranks\n27625 Essence",color=purple,penwidth=3.0];
+                Rogue  -> Ninja[label="20 Ranks\n157750 Essence",color=purple,penwidth=3.0];
+                Rogue  -> Sniper[label="10 Ranks\n27625 Essence",color=purple,penwidth=3.0];
+        }
+        subgraph firemage {
+                label="Firemage";
+                Firemage[image="firemage.png",label="",fixedsize=false];
+                Firemage  -> Bombermage[label="10 Ranks\n27625 Essence",color=red,penwidth=3.0];
+                Firemage  -> Lightningmage[label="5 Ranks\n7250 Essence",color=red,penwidth=3.0];
+        }
+        subgraph frostmage {
+                label="Frostmage";
+                Frostmage[image="frostmage.png",label="",fixedsize=false];
+                Frostmage  -> Trickster[label="10 Ranks\n27625 Essence",color=lightblue,penwidth=3.0];
+                Frostmage  -> Stormmage[label="20 Ranks\n157750 Essence",color=lightblue,penwidth=3.0];
+                Frostmage  -> Lightningmage[label="15 Ranks\n73625 Essence",color=lightblue,penwidth=3.0];
+        }
+        subgraph alchemist {
+                label="Alchemist";
+                Alchemist[image="alchemist.png",label="",fixedsize=false];
+                Alchemist  -> Deathdealer[label="15 Ranks\n73625 Essence",color=darkgreen,penwidth=3.0];
+                Alchemist  -> Necromancer[label="20 Ranks\n157750 Essence",color=darkgreen,penwidth=3.0];
+                Alchemist  -> Assasin[label="10 Ranks\n27625 Essence",color=darkgreen,penwidth=3.0];
+                Firemage  -> Deathdealer[label="5 Ranks\n7250 Essence",color=red,penwidth=3.0];
+        }
+        subgraph bard {
+                label="Bard";
+                Bard[image="bard.png",label="",fixedsize=false];
+                Bard  -> Trickster[label="10 Ranks\n27625 Essence",color=blue,penwidth=3.0];
+                Bard  -> Scout[label="15 Ranks\n73625 Essence",color=blue,penwidth=3.0];
+                Archer -> Mimic[label="5 Ranks\n7250 Essence",color=brown,penwidth=3.0];
+                Rogue  -> Mimic[label="5 Ranks\n7250 Essence",color=purple,penwidth=3.0];
+                Firemage  -> Mimic[label="5 Ranks\n7250 Essence",color=red,penwidth=3.0];
+                Frostmage  -> Mimic[label="5 Ranks\n7250 Essence",color=lightblue,penwidth=3.0];
+                Alchemist  -> Mimic[label="5 Ranks\n7250 Essence",color=darkgreen,penwidth=3.0];
+        }
+}
